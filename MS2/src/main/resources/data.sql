@@ -6,3 +6,4 @@ CREATE TABLE person (
 );
 
 INSERT INTO person (name) VALUES ('Mahesh');
+INSERT INTO person (name) VALUES ('Singtel');
