@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/persons")
+@RequestMapping("/a")
 public class PersonController {
 
     private final PersonRepository personRepository;
