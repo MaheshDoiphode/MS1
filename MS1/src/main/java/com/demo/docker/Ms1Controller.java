@@ -34,7 +34,7 @@ public class Ms1Controller {
 
     @GetMapping("/persons")
     public ResponseEntity<?> fetchAllPersonsFromMs2() {
-        String targetUrl = ms2ApiBaseUrl + "/persons";
+        String targetUrl = ms2ApiBaseUrl + "ms2/persons";
         log.info("MS1 calling MS2 to get all persons: GET {}", targetUrl);
         try {
             ResponseEntity<PersonDto[]> response = restTemplate.getForEntity(targetUrl, PersonDto[].class);
@@ -57,7 +57,7 @@ public class Ms1Controller {
 
     @GetMapping("/persons/{id}")
     public ResponseEntity<?> fetchPersonByIdFromMs2(@PathVariable Long id) {
-        String targetUrl = ms2ApiBaseUrl + "/persons/" + id;
+        String targetUrl = ms2ApiBaseUrl + "ms2/persons/" + id;
         log.info("MS1 calling MS2 to get person by ID: GET {}", targetUrl);
 
         try {
