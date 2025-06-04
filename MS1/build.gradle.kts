@@ -4,7 +4,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
-group = "com.demo2.docker"
+group = "com.demo1.docker"
 version = "0.0.1"
 
 java {
