@@ -4,8 +4,8 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
-group = "com.demo.docker"
-version = "0.0.1-SNAPSHOT"
+group = "com.demo2.docker"
+version = "0.0.1"
 
 java {
 	toolchain {

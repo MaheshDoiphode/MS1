@@ -1,1 +1,1 @@
-rootProject.name = "demo-docker"
+rootProject.name = "demo1-docker"
