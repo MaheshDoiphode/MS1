@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy
 
 # Install required tools for Gradle build
 RUN apt-get update && apt-get install -y curl unzip && rm -rf /var/lib/apt/lists/*
