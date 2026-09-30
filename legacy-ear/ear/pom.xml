@@ -39,6 +39,7 @@
                             <groupId>com.legacy.cm</groupId>
                             <artifactId>legacy-cm-web</artifactId>
                             <contextRoot>/legacy-cm-web</contextRoot>
+                            <bundleFileName>legacy-cm-web.war</bundleFileName>
                         </webModule>
                     </modules>
                 </configuration>

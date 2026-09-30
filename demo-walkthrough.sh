@@ -119,6 +119,7 @@ echo -e "Credentials: client_id=legacy-app, client_secret=cm-secret-123"
 echo -e "${MAGENTA}Calling: POST http://localhost:8082/oauth/token${NC}\n"
 
 TOKEN_RESPONSE=$(curl -s -X POST "http://localhost:8082/oauth/token" \
+    -H "Content-Type: application/x-www-form-urlencoded" \
     -d "grant_type=client_credentials&client_id=legacy-app&client_secret=cm-secret-123&scope=documents:read%20documents:write")
 echo "$TOKEN_RESPONSE"
 
