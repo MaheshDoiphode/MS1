@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   postgres-db:
     image: postgres
@@ -47,6 +45,28 @@ services:
       - "8081:8081"
     depends_on:
       - ms2-service
+    networks:
+      - singtel-network
+
+  legacy-ear-service:
+    build:
+      context: ./legacy-ear
+      dockerfile: Dockerfile
+    container_name: legacy-ear-container
+    environment:
+      - TARGET_REST_API_URL=http://ms2-service:8082
+      - OAUTH_CLIENT_ID=legacy-app
+      - OAUTH_CLIENT_SECRET=cm-secret-123
+      - DB_URL=jdbc:postgresql://postgres-db:5432/dockerdemo
+      - DB_USER=admin
+      - DB_PASSWORD=admin123
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      ms2-service:
+        condition: service_started
     networks:
       - singtel-network
 
